@@ -43,7 +43,7 @@ class ChatbotEngine:
     # Above this, always trust local intent (greetings, jokes, etc.)
     HIGH_CONFIDENCE = 0.7
     # How many recent messages to keep in context
-    MAX_CONTEXT_LENGTH = 6
+    MAX_CONTEXT_LENGTH = 12
 
     def __init__(self, intents_path: str = None):
         if intents_path is None:
@@ -52,6 +52,9 @@ class ChatbotEngine:
         self.intents_path = Path(intents_path)
         self.intents: list[dict] = []
         self.conversation_history: list[dict] = []
+        # Persistent memory — survives server restarts
+        self._history_file = Path(__file__).parent.parent / "data" / "chat_history.json"
+        self._load_persistent_history()
         # Track last used response per intent tag to avoid repeats
         self._last_response_by_tag: dict[str, str] = {}
         # Track recently used responses per intent for broader variety
@@ -1069,7 +1072,7 @@ class ChatbotEngine:
         ]
 
         # Add conversation history
-        for m in self.conversation_history[-6:]:
+        for m in self.conversation_history[-self.MAX_CONTEXT_LENGTH:]:
             role = "assistant" if m["role"] == "bot" else "user"
             messages.append({"role": role, "content": m["content"]})
 
@@ -1357,6 +1360,7 @@ class ChatbotEngine:
             religious_response = self._get_religious_response(user_message)
             if religious_response:
                 self.conversation_history.append({"role": "bot", "content": religious_response})
+                self._save_persistent_history()
                 return {
                     "response": religious_response,
                     "intent": "religious_knowledge",
@@ -1368,6 +1372,7 @@ class ChatbotEngine:
             ai_reply = self._get_ai_response(user_message)
             if ai_reply:
                 self.conversation_history.append({"role": "bot", "content": ai_reply})
+                self._save_persistent_history()
                 return {
                     "response": ai_reply,
                     "intent": "ai_fallback",
@@ -1379,6 +1384,7 @@ class ChatbotEngine:
             ai_reply = self._get_ai_response(user_message)
             if ai_reply:
                 self.conversation_history.append({"role": "bot", "content": ai_reply})
+                self._save_persistent_history()
                 return {
                     "response": ai_reply,
                     "intent": "ai_fallback",
@@ -1387,6 +1393,7 @@ class ChatbotEngine:
 
         response_text = self._apply_context(tag, user_message)
         self.conversation_history.append({"role": "bot", "content": response_text})
+        self._save_persistent_history()
 
         return {
             "response": response_text,
@@ -1399,7 +1406,30 @@ class ChatbotEngine:
         self.conversation_history.clear()
         self._last_response_by_tag.clear()
         self._recent_responses_by_tag.clear()
+        self._save_persistent_history()
 
     def get_history(self) -> list[dict]:
         """Return a copy of the conversation history."""
         return list(self.conversation_history)
+
+    # ── Persistent memory ───────────────────────────────────────
+
+    def _load_persistent_history(self) -> None:
+        """Load conversation history from disk so the bot remembers across restarts."""
+        if self._history_file.exists():
+            try:
+                with open(self._history_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, list):
+                    self.conversation_history = data[-100:]
+            except Exception:
+                self.conversation_history = []
+
+    def _save_persistent_history(self) -> None:
+        """Save conversation history to disk."""
+        try:
+            self._history_file.parent.mkdir(parents=True, exist_ok=True)
+            with open(self._history_file, "w", encoding="utf-8") as f:
+                json.dump(self.conversation_history[-200:], f, ensure_ascii=False, indent=2)
+        except Exception:
+            pass

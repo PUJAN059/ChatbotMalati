@@ -357,9 +357,24 @@ modalConfirm.addEventListener("click", async () => {
 });
 
 /* ── Welcome message ────────────────────────────────────────── */
-function appendWelcomeMessage() {
-  appendSystemMessage("Today · Start of conversation");
+async function appendWelcomeMessage() {
+  try {
+    const resp = await fetch("/api/history");
+    if (resp.ok) {
+      const data = await resp.json();
+      if (data.history && data.history.length > 0) {
+        appendSystemMessage("Previous conversation");
+        data.history.forEach((msg) => {
+          const row = createMessageRow(msg.content, msg.role === "user" ? "user" : "bot");
+          messagesArea.appendChild(row);
+        });
+        scrollToBottom(false);
+        return;
+      }
+    }
+  } catch (_) { /* ignore — show welcome instead */ }
 
+  appendSystemMessage("Today · Start of conversation");
   const welcomeRow = createMessageRow(
     "Hey there! 👋 I'm Malati, built by Pujan Subedi.\nI'm not that advanced, but I can try to make your day! Ask me anything — jokes, fun facts, or just say hi! 😊",
     "bot"

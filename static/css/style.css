@@ -964,22 +964,31 @@ svg { display: block; flex-shrink: 0; }
 /* ── Site footer ────────────────────────────────────────────── */
 .site-footer {
   text-align: center;
-  margin-top: 1.25rem;
-  padding: 0.6rem 0 0.4rem;
+  margin-top: 0;
+  padding: 0.5rem 0 0.3rem;
   font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--text-dim);
-  letter-spacing: 0.3px;
-  transition: color var(--transition-slow);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.7);
+  text-shadow: 0 0 8px rgba(255,255,255,0.6), 0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(255,255,255,0.15);
+  animation: footerGlow 2.5s ease-in-out infinite alternate;
+  transition: color var(--transition-slow), text-shadow var(--transition-slow);
 }
 
-.site-footer strong {
-  color: var(--text-muted);
-  font-weight: 600;
+@keyframes footerGlow {
+  0%   { text-shadow: 0 0 6px rgba(255,255,255,0.4), 0 0 15px rgba(255,255,255,0.2); opacity: 0.7; }
+  100% { text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 25px rgba(255,255,255,0.4), 0 0 50px rgba(255,255,255,0.2); opacity: 1; }
 }
 
 [data-theme="light"] .site-footer {
-  color: var(--text-dim);
+  color: rgba(0,0,0,0.7);
+  text-shadow: 0 0 8px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.25), 0 0 40px rgba(0,0,0,0.1);
+  animation: footerGlowLight 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes footerGlowLight {
+  0%   { text-shadow: 0 0 6px rgba(0,0,0,0.35), 0 0 15px rgba(0,0,0,0.15); opacity: 0.7; }
+  100% { text-shadow: 0 0 10px rgba(0,0,0,0.6), 0 0 25px rgba(0,0,0,0.3), 0 0 50px rgba(0,0,0,0.15); opacity: 1; }
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */
@@ -1061,7 +1070,7 @@ svg { display: block; flex-shrink: 0; }
   .site-footer {
     display: block;
     text-align: center;
-    padding: 0.25rem 0;
+    padding: 0.15rem 0 0.1rem;
     font-size: 0.58rem;
     flex-shrink: 0;
   }
@@ -1140,7 +1149,7 @@ svg { display: block; flex-shrink: 0; }
   .site-footer {
     display: block;
     text-align: center;
-    padding: 0.3rem 0;
+    padding: 0.2rem 0 0.15rem;
     font-size: 0.64rem;
     flex-shrink: 0;
   }

@@ -224,6 +224,23 @@ class ChatbotEngine:
 
         return False
 
+    def _is_generic_religious_request(self, query: str) -> bool:
+        """Detect generic requests like 'tell me one verse', 'give me a quote', etc."""
+        lower = query.lower()
+        generic_patterns = [
+            "one line", "one verse", "one quote", "one shloka", "one shlok",
+            "tell me a verse", "tell me a quote", "tell me a line",
+            "give me a verse", "give me a quote", "give me a line",
+            "share a verse", "share a quote", "share a line",
+            "tell me something from", "give me something from",
+            "any verse", "any quote", "any line",
+            "some verse", "some quote", "some line",
+            "best verse", "best quote", "best line",
+            "famous verse", "famous quote", "famous line",
+            "popular verse", "popular quote", "popular line",
+        ]
+        return any(p in lower for p in generic_patterns)
+
     def _search_bhagavad_gita(self, query: str, quantity: str = "medium") -> str:
         """Search the Bhagavad Gita knowledge base for relevant information."""
         if not self._bhagavad_gita:
@@ -232,6 +249,64 @@ class ChatbotEngine:
         lower = query.lower()
         results = []
 
+        # For generic requests, randomly sample from all items
+        if self._is_generic_religious_request(query):
+            all_famous = self._bhagavad_gita.get("famous_verses", [])
+            all_chapters = self._bhagavad_gita.get("chapters", [])
+            all_teachings = list(self._bhagavad_gita.get("core_teachings", {}).values())
+
+            if quantity == "short":
+                if all_famous:
+                    verse = random.choice(all_famous)
+                    results.append({
+                        "type": "famous_verse",
+                        "verse": verse.get("verse"),
+                        "text": verse.get("text"),
+                        "translation": verse.get("translation"),
+                        "significance": verse.get("significance")
+                    })
+            elif quantity == "long":
+                sampled_verses = random.sample(all_famous, min(3, len(all_famous)))
+                for v in sampled_verses:
+                    results.append({
+                        "type": "famous_verse",
+                        "verse": v.get("verse"),
+                        "text": v.get("text"),
+                        "translation": v.get("translation"),
+                        "significance": v.get("significance")
+                    })
+                sampled_teachings = random.sample(all_teachings, min(2, len(all_teachings)))
+                for t in sampled_teachings:
+                    results.append({
+                        "type": "core_teaching",
+                        "title": t.get("title"),
+                        "description": t.get("description"),
+                        "key_principle": t.get("key_principle"),
+                        "reference": t.get("reference")
+                    })
+            else:  # medium
+                sampled_verses = random.sample(all_famous, min(2, len(all_famous)))
+                for v in sampled_verses:
+                    results.append({
+                        "type": "famous_verse",
+                        "verse": v.get("verse"),
+                        "text": v.get("text"),
+                        "translation": v.get("translation"),
+                        "significance": v.get("significance")
+                    })
+                if all_teachings:
+                    teaching = random.choice(all_teachings)
+                    results.append({
+                        "type": "core_teaching",
+                        "title": teaching.get("title"),
+                        "description": teaching.get("description"),
+                        "key_principle": teaching.get("key_principle"),
+                        "reference": teaching.get("reference")
+                    })
+
+            return self._format_gita_results(results, query, quantity)
+
+        # Specific query — use word matching
         # Search through chapters
         for chapter in self._bhagavad_gita.get("chapters", []):
             chapter_text = f"{chapter.get('title', '')} {chapter.get('subtitle', '')}".lower()
@@ -285,6 +360,62 @@ class ChatbotEngine:
         lower = query.lower()
         results = []
 
+        # For generic requests, randomly sample from all items
+        if self._is_generic_religious_request(query):
+            all_parables = self._bible.get("parables", [])
+            all_beatitudes = self._bible.get("beatitudes", [])
+            all_ot = self._bible.get("old_testament_stories", [])
+            all_psalms = self._bible.get("psalms_and_proverbs", {}).get("selected_psalms", [])
+            all_proverbs = self._bible.get("psalms_and_proverbs", {}).get("selected_proverbs", [])
+
+            if quantity == "short":
+                # Pick 1 random item from a random category
+                categories = []
+                if all_beatitudes:
+                    categories.append(("beatitude", random.choice(all_beatitudes)))
+                if all_proverbs:
+                    categories.append(("proverb", random.choice(all_proverbs)))
+                if all_psalms:
+                    categories.append(("psalm", random.choice(all_psalms)))
+                if all_parables:
+                    categories.append(("parable", random.choice(all_parables)))
+                if all_ot:
+                    categories.append(("ot_story", random.choice(all_ot)))
+                if categories:
+                    ctype, item = random.choice(categories)
+                    if ctype == "beatitude":
+                        results.append({"type": "beatitude", "verse": item.get("verse"), "text": item.get("text"), "meaning": item.get("meaning")})
+                    elif ctype == "proverb":
+                        results.append({"type": "proverb", "reference": item.get("reference"), "text": item.get("text"), "meaning": item.get("meaning")})
+                    elif ctype == "psalm":
+                        results.append({"type": "psalm", "reference": item.get("reference"), "text": item.get("text"), "meaning": item.get("meaning")})
+                    elif ctype == "parable":
+                        results.append({"type": "parable", "title": item.get("title"), "reference": item.get("reference"), "story": item.get("story"), "teaching": item.get("teaching"), "lesson": item.get("lesson")})
+                    elif ctype == "ot_story":
+                        results.append({"type": "ot_story", "title": item.get("title"), "reference": item.get("reference"), "summary": item.get("summary"), "teaching": item.get("teaching")})
+            elif quantity == "long":
+                for item in random.sample(all_beatitudes, min(2, len(all_beatitudes))):
+                    results.append({"type": "beatitude", "verse": item.get("verse"), "text": item.get("text"), "meaning": item.get("meaning")})
+                for item in random.sample(all_proverbs, min(2, len(all_proverbs))):
+                    results.append({"type": "proverb", "reference": item.get("reference"), "text": item.get("text"), "meaning": item.get("meaning")})
+                for item in random.sample(all_psalms, min(1, len(all_psalms))):
+                    results.append({"type": "psalm", "reference": item.get("reference"), "text": item.get("text"), "meaning": item.get("meaning")})
+                for item in random.sample(all_parables, min(1, len(all_parables))):
+                    results.append({"type": "parable", "title": item.get("title"), "reference": item.get("reference"), "story": item.get("story"), "teaching": item.get("teaching"), "lesson": item.get("lesson")})
+            else:  # medium
+                if all_beatitudes:
+                    item = random.choice(all_beatitudes)
+                    results.append({"type": "beatitude", "verse": item.get("verse"), "text": item.get("text"), "meaning": item.get("meaning")})
+                if all_proverbs:
+                    item = random.choice(all_proverbs)
+                    results.append({"type": "proverb", "reference": item.get("reference"), "text": item.get("text"), "meaning": item.get("meaning")})
+                if all_parables:
+                    item = random.choice(all_parables)
+                    results.append({"type": "parable", "title": item.get("title"), "reference": item.get("reference"), "story": item.get("story"), "teaching": item.get("teaching"), "lesson": item.get("lesson")})
+
+            return self._format_bible_results(results, query, quantity)
+
+        # Specific query — use word matching
         # Search parables
         for parable in self._bible.get("parables", []):
             parable_text = f"{parable.get('title', '')} {parable.get('teaching', '')} {parable.get('story', '')}".lower()
@@ -397,10 +528,14 @@ class ChatbotEngine:
                 "The text addresses the moral and philosophical dilemmas faced by Arjuna on the battlefield of Kurukshetra."
             )
 
-        # Process results by type
+        # Process results by type and shuffle for variety
         chapters = [r for r in results if r.get("type") == "chapter"]
         verses = [r for r in results if r.get("type") == "famous_verse"]
         teachings = [r for r in results if r.get("type") == "core_teaching"]
+
+        random.shuffle(chapters)
+        random.shuffle(verses)
+        random.shuffle(teachings)
 
         # Determine limits based on quantity
         if quantity == "short":
@@ -418,24 +553,23 @@ class ChatbotEngine:
 
         # Add chapter information
         for chapter in chapters[:chapter_limit]:
-            response_parts.append(f"\n**Chapter {chapter['chapter']}: {chapter['title']}** ({chapter['subtitle']})")
+            response_parts.append(f"Chapter {chapter['chapter']}: {chapter['title']} ({chapter['subtitle']})")
             response_parts.append(f"{chapter['summary']}")
             if chapter.get('teachings'):
-                response_parts.append("\nKey teachings:")
+                response_parts.append("Key teachings:")
                 for teaching in chapter['teachings'][:3]:
-                    response_parts.append(f"• {teaching}")
+                    response_parts.append(f"  {teaching}")
 
         # Add famous verses
         for verse in verses[:verse_limit]:
-            response_parts.append(f"\n**Famous Verse (BG {verse['verse']}):**")
-            response_parts.append(f"{verse['text']}")
+            response_parts.append(f"BG {verse['verse']}: {verse['text']}")
             response_parts.append(f"Translation: {verse['translation']}")
             if quantity != "short":
                 response_parts.append(f"Significance: {verse['significance']}")
 
         # Add core teachings
         for teaching in teachings[:teaching_limit]:
-            response_parts.append(f"\n**{teaching['title']}:**")
+            response_parts.append(f"{teaching['title']}")
             response_parts.append(f"{teaching['description']}")
             if quantity != "short":
                 response_parts.append(f"Key principle: {teaching['key_principle']}")
@@ -458,7 +592,7 @@ class ChatbotEngine:
                 "parables, commandments, and spiritual guidance."
             )
 
-        # Process results by type
+        # Process results by type and shuffle for variety
         parables = [r for r in results if r.get("type") == "parable"]
         beatitudes = [r for r in results if r.get("type") == "beatitude"]
         jesus_teachings = [r for r in results if r.get("type") == "jesus_teaching"]
@@ -467,6 +601,15 @@ class ChatbotEngine:
         proverbs = [r for r in results if r.get("type") == "proverb"]
         commandments = [r for r in results if r.get("type") == "commandment"]
         apostle_teachings = [r for r in results if r.get("type") == "apostle_teaching"]
+
+        random.shuffle(parables)
+        random.shuffle(beatitudes)
+        random.shuffle(jesus_teachings)
+        random.shuffle(stories)
+        random.shuffle(psalms)
+        random.shuffle(proverbs)
+        random.shuffle(commandments)
+        random.shuffle(apostle_teachings)
 
         # Determine limits based on quantity
         if quantity == "short":
@@ -478,7 +621,7 @@ class ChatbotEngine:
 
         # Add parables
         for parable in parables[:limit]:
-            response_parts.append(f"\n**The Parable of the {parable['title']}** ({parable['reference']})")
+            response_parts.append(f"The Parable of the {parable['title']} ({parable['reference']})")
             if quantity == "short":
                 response_parts.append(f"Teaching: {parable['teaching']}")
             else:
@@ -488,26 +631,25 @@ class ChatbotEngine:
 
         # Add Beatitudes
         for beatitude in beatitudes[:limit]:
-            response_parts.append(f"\n**Beatitude** ({beatitude['verse']})")
-            response_parts.append(f"\"{beatitude['text']}\"")
+            response_parts.append(f"{beatitude['verse']}: \"{beatitude['text']}\"")
             if quantity != "short":
                 response_parts.append(f"Meaning: {beatitude['meaning']}")
 
         # Add Jesus teachings
         for teaching in jesus_teachings[:limit]:
-            response_parts.append(f"\n**{teaching['topic']}** ({teaching['reference']})")
+            response_parts.append(f"{teaching['topic']} ({teaching['reference']})")
             if quantity == "short":
-                response_parts.append(f"• {teaching['key_teachings'][0] if teaching['key_teachings'] else ''}")
+                response_parts.append(f"  {teaching['key_teachings'][0] if teaching['key_teachings'] else ''}")
             else:
                 response_parts.append("Key teachings:")
                 for t in teaching['key_teachings'][:3]:
-                    response_parts.append(f"• {t}")
+                    response_parts.append(f"  {t}")
                 if teaching.get('significance'):
                     response_parts.append(f"Significance: {teaching['significance']}")
 
         # Add Old Testament stories
         for story in stories[:limit]:
-            response_parts.append(f"\n**The Story of {story['title']}** ({story['reference']})")
+            response_parts.append(f"The Story of {story['title']} ({story['reference']})")
             if quantity == "short":
                 response_parts.append(f"Teaching: {story['teaching']}")
             else:
@@ -516,29 +658,25 @@ class ChatbotEngine:
 
         # Add Psalms
         for psalm in psalms[:limit]:
-            response_parts.append(f"\n**{psalm['reference']}**")
-            response_parts.append(f"\"{psalm['text']}\"")
+            response_parts.append(f"{psalm['reference']}: \"{psalm['text']}\"")
             if quantity != "short":
                 response_parts.append(f"Meaning: {psalm['meaning']}")
 
         # Add Proverbs
         for proverb in proverbs[:limit]:
-            response_parts.append(f"\n**{proverb['reference']}**")
-            response_parts.append(f"\"{proverb['text']}\"")
+            response_parts.append(f"{proverb['reference']}: \"{proverb['text']}\"")
             if quantity != "short":
                 response_parts.append(f"Meaning: {proverb['meaning']}")
 
         # Add Commandments
         for cmd in commandments[:limit]:
-            response_parts.append(f"\n**Commandment #{cmd['number']}** ({cmd['reference']})")
-            response_parts.append(f"\"{cmd['command']}\"")
+            response_parts.append(f"Commandment #{cmd['number']} ({cmd['reference']}): \"{cmd['command']}\"")
             if quantity != "short":
                 response_parts.append(f"Meaning: {cmd['meaning']}")
 
         # Add Apostle teachings
         for teaching in apostle_teachings[:limit]:
-            response_parts.append(f"\n**{teaching['apostle']} on {teaching['topic']}** ({teaching['reference']})")
-            response_parts.append(f"\"{teaching['text']}\"")
+            response_parts.append(f"{teaching['apostle']} on {teaching['topic']} ({teaching['reference']}): \"{teaching['text']}\"")
             if quantity != "short":
                 response_parts.append(f"Meaning: {teaching['meaning']}")
 
@@ -597,9 +735,9 @@ class ChatbotEngine:
         combined = []
         for source, response in responses:
             if source == "bhagavad_gita":
-                combined.append(f"**From the Bhagavad Gita:**\n{response}")
+                combined.append(f"From the Bhagavad Gita:\n{response}")
             elif source == "bible":
-                combined.append(f"**From the Holy Bible:**\n{response}")
+                combined.append(f"From the Holy Bible:\n{response}")
 
         final_response = "\n\n---\n\n".join(combined)
 
@@ -621,99 +759,99 @@ class ChatbotEngine:
         if is_gita or any(kw in lower for kw in ["hindu", "vedic", "sanatan", "dharma", "karma", "yoga"]):
             if "reincarnation" in lower or "rebirth" in lower or "cycle" in lower or "samsara" in lower:
                 return (
-                    "**Reincarnation (Samsara) in Hindu Philosophy:**\n\n"
+                    "Reincarnation (Samsara) in Hindu Philosophy:\n\n"
                     "Reincarnation is a core concept in Hinduism, known as Samsara — the cycle of birth, death, and rebirth. "
                     "According to the Bhagavad Gita, the soul (Atman) is eternal and indestructible. It merely changes bodies "
                     "like a person changes worn-out clothes.\n\n"
-                    "**Key Teaching (BG 2.22):**\n"
+                    "Key Teaching (BG 2.22):\n"
                     "\"As a person puts on new garments, giving up old ones, the soul similarly accepts new material bodies, "
                     "giving up the old and useless ones.\"\n\n"
-                    "**How it works:**\n"
-                    "• The soul takes birth based on its karma (actions) and desires\n"
-                    "• Good karma leads to better circumstances in future births\n"
-                    "• Bad karma leads to less favorable circumstances\n"
-                    "• The ultimate goal is Moksha — liberation from this cycle\n\n"
-                    "**The Gita's perspective on transcending reincarnation:**\n"
-                    "• Self-realization (knowing the true nature of the soul)\n"
-                    "• Devotion to God (Bhakti Yoga)\n"
-                    "• Selfless action (Karma Yoga)\n"
-                    "• Knowledge (Jnana Yoga)\n\n"
-                    "Would you like to know more about any specific aspect? 🙏"
+                    "How it works:\n"
+                    "- The soul takes birth based on its karma (actions) and desires\n"
+                    "- Good karma leads to better circumstances in future births\n"
+                    "- Bad karma leads to less favorable circumstances\n"
+                    "- The ultimate goal is Moksha — liberation from this cycle\n\n"
+                    "The Gita's perspective on transcending reincarnation:\n"
+                    "- Self-realization (knowing the true nature of the soul)\n"
+                    "- Devotion to God (Bhakti Yoga)\n"
+                    "- Selfless action (Karma Yoga)\n"
+                    "- Knowledge (Jnana Yoga)\n\n"
+                    "Would you like to know more about any specific aspect?"
                 )
             elif "yoga" in lower and "philosophy" in lower:
                 return (
-                    "**Yoga Philosophy in the Bhagavad Gita:**\n\n"
+                    "Yoga Philosophy in the Bhagavad Gita:\n\n"
                     "Yoga in the Bhagavad Gita is not just physical exercise — it is a comprehensive spiritual path "
                     "to union with the Divine. Krishna teaches four main paths of Yoga:\n\n"
-                    "**1. Karma Yoga (Path of Action):**\n"
+                    "1. Karma Yoga (Path of Action):\n"
                     "Performing one's duty without attachment to results. Every action becomes an offering to God.\n"
                     "Key verse: \"You have the right to work, but never to the fruit of work.\" (BG 2.47)\n\n"
-                    "**2. Bhakti Yoga (Path of Devotion):**\n"
+                    "2. Bhakti Yoga (Path of Devotion):\n"
                     "Loving devotion to God. The easiest and most accessible path. Complete surrender to the Divine.\n"
                     "Key verse: \"Surrender unto Me alone. I shall deliver you from all sinful reactions.\" (BG 18.66)\n\n"
-                    "**3. Jnana Yoga (Path of Knowledge):**\n"
+                    "3. Jnana Yoga (Path of Knowledge):\n"
                     "Pursuit of spiritual wisdom and self-realization. Understanding the distinction between the eternal self and the temporary body.\n"
                     "Key verse: \"The soul is never born nor dies. It is unborn, eternal, ever-existing.\" (BG 2.20)\n\n"
-                    "**4. Raja Yoga (Path of Meditation):**\n"
+                    "4. Raja Yoga (Path of Meditation):\n"
                     "Practicing meditation to control the mind and realize the self. Regular practice in a quiet place.\n"
                     "Key verse: \"The mind is the friend of the conditioned soul, and its enemy as well.\" (BG 6.5)\n\n"
-                    "**The Goal of All Yoga:**\n"
+                    "The Goal of All Yoga:\n"
                     "All paths lead to the same destination — liberation (Moksha) and eternal union with God.\n\n"
-                    "Would you like to explore any specific path in more detail? 🙏"
+                    "Would you like to explore any specific path in more detail?"
                 )
             else:
                 return (
-                    "**The Bhagavad Gita — Eternal Wisdom:**\n\n"
+                    "The Bhagavad Gita — Eternal Wisdom:\n\n"
                     "The Bhagavad Gita is a 700-verse Hindu scripture that is part of the epic Mahabharata. "
                     "It is a dialogue between Prince Arjuna and Lord Krishna, who serves as his charioteer.\n\n"
-                    "**Core Teachings:**\n"
-                    "• **Karma Yoga:** Selfless action without attachment to results\n"
-                    "• **Bhakti Yoga:** Loving devotion to God\n"
-                    "• **Jnana Yoga:** Pursuit of spiritual knowledge\n"
-                    "• **Dhyana Yoga:** Practice of meditation\n\n"
-                    "**The Eternal Soul (Atman):**\n"
+                    "Core Teachings:\n"
+                    "- Karma Yoga: Selfless action without attachment to results\n"
+                    "- Bhakti Yoga: Loving devotion to God\n"
+                    "- Jnana Yoga: Pursuit of spiritual knowledge\n"
+                    "- Dhyana Yoga: Practice of meditation\n\n"
+                    "The Eternal Soul (Atman):\n"
                     "\"The soul is never born nor dies at any time. It has not come into being, does not come into being, "
                     "and will not come into being. It is unborn, eternal, ever-existing, and primeval. It is not slain when the body is slain.\" (BG 2.20)\n\n"
-                    "**The Supreme Teaching:**\n"
+                    "The Supreme Teaching:\n"
                     "\"Abandon all varieties of duty and just surrender unto Me. I shall deliver you from all sinful reactions. Do not grieve.\" (BG 18.66)\n\n"
-                    "What specific aspect of the Gita would you like to learn more about? 🙏"
+                    "What specific aspect of the Gita would you like to learn more about?"
                 )
 
         # Bible related responses
         if is_bible or any(kw in lower for kw in ["christian", "church", "faith"]):
             return (
-                "**The Holy Bible — Divine Revelation:**\n\n"
+                "The Holy Bible — Divine Revelation:\n\n"
                 "The Holy Bible is the sacred scripture of Christianity, consisting of the Old Testament (39 books) "
                 "and New Testament (27 books).\n\n"
-                "**The Two Greatest Commandments (Matthew 22:37-40):**\n"
+                "The Two Greatest Commandments (Matthew 22:37-40):\n"
                 "1. Love the Lord your God with all your heart, soul, and mind\n"
                 "2. Love your neighbor as yourself\n\n"
-                "**The Golden Rule (Matthew 7:12):**\n"
+                "The Golden Rule (Matthew 7:12):\n"
                 "\"Do to others what you would have them do to you.\"\n\n"
-                "**Key Teachings of Jesus:**\n"
-                "• Forgive others as God forgives you\n"
-                "• Love your enemies and pray for those who persecute you\n"
-                "• The Good Shepherd lays down his life for the sheep\n"
-                "• Faith as small as a mustard seed can move mountains\n\n"
-                "**The Fruit of the Spirit (Galatians 5:22-23):**\n"
+                "Key Teachings of Jesus:\n"
+                "- Forgive others as God forgives you\n"
+                "- Love your enemies and pray for those who persecute you\n"
+                "- The Good Shepherd lays down his life for the sheep\n"
+                "- Faith as small as a mustard seed can move mountains\n\n"
+                "The Fruit of the Spirit (Galatians 5:22-23):\n"
                 "Love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness, and self-control.\n\n"
-                "What specific topic from the Bible would you like to explore? ✝️"
+                "What specific topic from the Bible would you like to explore?"
             )
 
         # General spiritual response
         return (
-            "**Spiritual Wisdom:**\n\n"
+            "Spiritual Wisdom:\n\n"
             "Both the Bhagavad Gita and the Bible offer profound spiritual wisdom:\n\n"
-            "**Bhagavad Gita (Hinduism):**\n"
-            "• The soul is eternal and indestructible\n"
-            "• Perform selfless action (Karma Yoga)\n"
-            "• Devote yourself to God (Bhakti Yoga)\n"
-            "• Seek spiritual knowledge (Jnana Yoga)\n\n"
-            "**The Bible (Christianity):**\n"
-            "• Love God with all your heart\n"
-            "• Love your neighbor as yourself\n"
-            "• Forgive others as God forgives you\n"
-            "• Have faith and trust in God\n\n"
+            "Bhagavad Gita (Hinduism):\n"
+            "- The soul is eternal and indestructible\n"
+            "- Perform selfless action (Karma Yoga)\n"
+            "- Devote yourself to God (Bhakti Yoga)\n"
+            "- Seek spiritual knowledge (Jnana Yoga)\n\n"
+            "The Bible (Christianity):\n"
+            "- Love God with all your heart\n"
+            "- Love your neighbor as yourself\n"
+            "- Forgive others as God forgives you\n"
+            "- Have faith and trust in God\n\n"
             "Both traditions teach love, compassion, and the pursuit of spiritual truth. "
             "Would you like to explore any specific teaching in more detail? 🙏"
         )

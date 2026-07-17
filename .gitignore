@@ -3,3 +3,4 @@ __pycache__/
 venv/
 .venv/
 *.pyc
+data/chat_history.json

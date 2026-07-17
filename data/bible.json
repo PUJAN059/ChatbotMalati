@@ -1,0 +1,524 @@
+{
+  "title": "The Holy Bible",
+  "description": "The Bible is the sacred scripture of Christianity, consisting of the Old Testament and New Testament. It contains religious texts, histories, prophecies, teachings of Jesus Christ, parables, commandments, and spiritual guidance.",
+  "total_books": 66,
+  "testaments": {
+    "old": {
+      "books": 39,
+      "description": "The Old Testament contains the creation narrative, the history of Israel, the Law (Torah), prophecies, wisdom literature, and the Psalms."
+    },
+    "new": {
+      "books": 27,
+      "description": "The New Testament contains the Gospels (life of Jesus), Acts, the Epistles (letters), and Revelation."
+    }
+  },
+  "ten_commandments": [
+    {
+      "number": 1,
+      "command": "You shall have no other gods before me.",
+      "reference": "Exodus 20:3",
+      "meaning": "God is to be the only object of worship and devotion."
+    },
+    {
+      "number": 2,
+      "command": "You shall not make for yourself a carved image.",
+      "reference": "Exodus 20:4-6",
+      "meaning": "Do not worship idols or false representations of God."
+    },
+    {
+      "number": 3,
+      "command": "You shall not take the name of the Lord your God in vain.",
+      "reference": "Exodus 20:7",
+      "meaning": "Do not misuse God's name or use it disrespectfully."
+    },
+    {
+      "number": 4,
+      "command": "Remember the Sabbath day, to keep it holy.",
+      "reference": "Exodus 20:8-11",
+      "meaning": "Set aside one day per week for rest and worship."
+    },
+    {
+      "number": 5,
+      "command": "Honor your father and your mother.",
+      "reference": "Exodus 20:12",
+      "meaning": "Respect and care for your parents."
+    },
+    {
+      "number": 6,
+      "command": "You shall not murder.",
+      "reference": "Exodus 20:13",
+      "meaning": "Do not kill; human life is sacred."
+    },
+    {
+      "number": 7,
+      "command": "You shall not commit adultery.",
+      "reference": "Exodus 20:14",
+      "meaning": "Be faithful in your marriage."
+    },
+    {
+      "number": 8,
+      "command": "You shall not steal.",
+      "reference": "Exodus 20:15",
+      "meaning": "Do not take what belongs to others."
+    },
+    {
+      "number": 9,
+      "command": "You shall not bear false witness against your neighbor.",
+      "reference": "Exodus 20:16",
+      "meaning": "Do not lie or give false testimony."
+    },
+    {
+      "number": 10,
+      "command": "You shall not covet your neighbor's house, wife, or possessions.",
+      "reference": "Exodus 20:17",
+      "meaning": "Do not desire what belongs to others."
+    }
+  ],
+  "jesus_commandments": {
+    "title": "The Two Greatest Commandments",
+    "reference": "Matthew 22:37-40",
+    "commandments": [
+      {
+        "command": "Love the Lord your God with all your heart, with all your soul, and with all your mind.",
+        "reference": "Matthew 22:37",
+        "meaning": "Total devotion and love for God above all else."
+      },
+      {
+        "command": "Love your neighbor as yourself.",
+        "reference": "Matthew 22:39",
+        "meaning": "Treat others with the same love and care you give yourself."
+      }
+    ],
+    "significance": "Jesus said all the Law and the Prophets hang on these two commands."
+  },
+  "beatitudes": [
+    {
+      "verse": "Matthew 5:3",
+      "text": "Blessed are the poor in spirit, for theirs is the kingdom of heaven.",
+      "meaning": "Those who recognize their spiritual need receive God's kingdom."
+    },
+    {
+      "verse": "Matthew 5:4",
+      "text": "Blessed are those who mourn, for they will be comforted.",
+      "meaning": "Those who grieve will receive God's comfort."
+    },
+    {
+      "verse": "Matthew 5:5",
+      "text": "Blessed are the meek, for they will inherit the earth.",
+      "meaning": "The humble and gentle will receive God's promises."
+    },
+    {
+      "verse": "Matthew 5:6",
+      "text": "Blessed are those who hunger and thirst for righteousness, for they will be filled.",
+      "meaning": "Those who deeply desire righteousness will be satisfied."
+    },
+    {
+      "verse": "Matthew 5:7",
+      "text": "Blessed are the merciful, for they will be shown mercy.",
+      "meaning": "Those who show mercy receive mercy from God."
+    },
+    {
+      "verse": "Matthew 5:8",
+      "text": "Blessed are the pure in heart, for they will see God.",
+      "meaning": "A pure heart leads to seeing God."
+    },
+    {
+      "verse": "Matthew 5:9",
+      "text": "Blessed are the peacemakers, for they will be called children of God.",
+      "meaning": "Those who make peace reflect God's nature."
+    },
+    {
+      "verse": "Matthew 5:10",
+      "text": "Blessed are those who are persecuted because of righteousness, for theirs is the kingdom of heaven.",
+      "meaning": "Suffering for righteousness brings heavenly reward."
+    }
+  ],
+  "parables": [
+    {
+      "title": "The Good Samaritan",
+      "reference": "Luke 10:25-37",
+      "story": "A man was beaten and left half-dead. A priest and a Levite passed by without helping, but a Samaritan stopped, bound his wounds, and cared for him.",
+      "teaching": "Love your neighbor as yourself, regardless of race or social status. True neighborliness crosses all boundaries.",
+      "lesson": "Compassion and action toward those in need define true love."
+    },
+    {
+      "title": "The Prodigal Son",
+      "reference": "Luke 15:11-32",
+      "story": "A son demanded his inheritance early, wasted it, and returned home hungry. His father welcomed him with open arms and a celebration.",
+      "teaching": "God's forgiveness is unconditional. No matter how far we stray, God always welcomes us back with love.",
+      "lesson": "Repentance and returning to God always leads to restoration."
+    },
+    {
+      "title": "The Sower",
+      "reference": "Matthew 13:3-23",
+      "story": "A farmer scattered seeds on different types of soil. Some grew, some didn't, depending on the soil type.",
+      "teaching": "The Word of God is like seed — its growth depends on the condition of the heart receiving it.",
+      "lesson": "A receptive heart allows God's word to bear fruit."
+    },
+    {
+      "title": "The Mustard Seed",
+      "reference": "Matthew 13:31-32",
+      "story": "The kingdom of heaven is like a mustard seed, the smallest seed, which grows into a large tree.",
+      "teaching": "Small beginnings can lead to great things in God's kingdom.",
+      "lesson": "Faith as small as a mustard seed can grow into something magnificent."
+    },
+    {
+      "title": "The Lost Sheep",
+      "reference": "Matthew 18:12-14",
+      "story": "A shepherd leaves 99 sheep to find one lost sheep, and rejoices when he finds it.",
+      "teaching": "God cares deeply for every single person and will seek out the lost.",
+      "lesson": "Every individual matters to God."
+    },
+    {
+      "title": "The Pearl of Great Price",
+      "reference": "Matthew 13:45-46",
+      "story": "A merchant found a pearl of great value and sold everything he had to buy it.",
+      "teaching": "The Kingdom of Heaven is worth giving up everything else for.",
+      "lesson": "True treasure requires total commitment."
+    },
+    {
+      "title": "The Talents",
+      "reference": "Matthew 25:14-30",
+      "story": "A master gave talents to servants. Two doubled their money, but one buried his. The faithful ones were rewarded.",
+      "teaching": "We should use our gifts and abilities for God's glory, not hide them.",
+      "lesson": "Faithful stewardship of God's gifts leads to reward."
+    },
+    {
+      "title": "The Wheat and the Tares",
+      "reference": "Matthew 13:24-30",
+      "story": "A farmer sowed good wheat, but an enemy sowed weeds. The farmer let both grow together until harvest.",
+      "teaching": "Good and evil will coexist until the final judgment.",
+      "lesson": "God will ultimately separate the righteous from the wicked."
+    }
+  ],
+  "old_testament_stories": [
+    {
+      "title": "Creation",
+      "reference": "Genesis 1-2",
+      "summary": "God created the heavens, earth, plants, animals, and humanity in six days. On the seventh day, He rested. Adam and Eve were created and placed in the Garden of Eden.",
+      "teaching": "God is the creator of all things. Humanity is made in God's image with purpose and dignity."
+    },
+    {
+      "title": "The Fall of Man",
+      "reference": "Genesis 3",
+      "summary": "Adam and Eve ate the forbidden fruit from the Tree of Knowledge of Good and Evil, brought by the serpent's temptation.",
+      "teaching": "Sin entered the world through disobedience. Choices have consequences."
+    },
+    {
+      "title": "Noah's Ark",
+      "reference": "Genesis 6-9",
+      "summary": "God commanded Noah to build an ark to save his family and pairs of animals from a great flood that covered the earth.",
+      "teaching": "Obedience to God brings salvation. God's judgment and mercy both operate simultaneously."
+    },
+    {
+      "title": "Abraham's Sacrifice",
+      "reference": "Genesis 22",
+      "summary": "God tested Abraham by asking him to sacrifice his son Isaac. At the last moment, God provided a ram instead.",
+      "teaching": "Complete faith and obedience to God. God provides for those who trust Him."
+    },
+    {
+      "title": "Moses and the Red Sea",
+      "reference": "Exodus 14",
+      "summary": "Moses led the Israelites out of Egypt. God parted the Red Sea to let them cross safely, while the pursuing Egyptians were destroyed.",
+      "teaching": "God delivers His people from bondage and enemies when they trust Him."
+    },
+    {
+      "title": "The Ten Commandments",
+      "reference": "Exodus 20",
+      "summary": "God gave Moses ten commandments on Mount Sinai as the foundation of His covenant with Israel.",
+      "teaching": "God's moral law is the basis for a righteous life and relationship with Him."
+    },
+    {
+      "title": "David and Goliath",
+      "reference": "1 Samuel 17",
+      "summary": "Young David, armed only with a sling and stone, defeated the giant Goliath who terrified the entire Israelite army.",
+      "teaching": "With faith in God, even the smallest can overcome the greatest challenges."
+    },
+    {
+      "title": "Jonah and the Whale",
+      "reference": "Jonah 1-4",
+      "summary": "Jonah tried to flee from God's command to preach to Nineveh. He was swallowed by a great fish, repented, and was delivered.",
+      "teaching": "God's call cannot be avoided. Repentance leads to mercy, even for enemies."
+    },
+    {
+      "title": "The Book of Job",
+      "reference": "Job 1-42",
+      "summary": "Job, a righteous man, lost everything through no fault of his own. After suffering and questioning, God restored him.",
+      "teaching": "Faith is tested through suffering. God's ways are beyond human understanding."
+    },
+    {
+      "title": "Daniel in the Lions' Den",
+      "reference": "Daniel 6",
+      "summary": "Daniel was thrown into a den of lions for praying to God, but God shut the lions' mouths and protected him.",
+      "teaching": "Faithfulness to God is rewarded with divine protection, even in the most dangerous situations."
+    }
+  ],
+  "jesus_teachings": [
+    {
+      "topic": "The Sermon on the Mount",
+      "reference": "Matthew 5-7",
+      "key_teachings": [
+        "The Beatitudes — characteristics of the blessed",
+        "Be salt and light to the world",
+        "Love your enemies and pray for those who persecute you",
+        "Give to the needy in secret",
+        "Pray in your room, not for public display",
+        "The Lord's Prayer",
+        "Do not worry about tomorrow",
+        "Judge not, lest you be judged",
+        "The Golden Rule: Do unto others as you would have them do unto you"
+      ],
+      "significance": "The most comprehensive teaching of Jesus on how to live as his disciple."
+    },
+    {
+      "topic": "The Great Commandment",
+      "reference": "Matthew 22:36-40",
+      "key_teachings": [
+        "Love God with all your heart, soul, and mind",
+        "Love your neighbor as yourself",
+        "All the Law and Prophets depend on these two commands"
+      ],
+      "significance": "Summarizes the entire moral law in two commands."
+    },
+    {
+      "topic": "The Golden Rule",
+      "reference": "Matthew 7:12",
+      "key_teachings": [
+        "Do to others what you would have them do to you",
+        "This is the essence of the Law and Prophets"
+      ],
+      "significance": "The universal principle of reciprocity and compassion."
+    },
+    {
+      "topic": "Forgiveness",
+      "reference": "Matthew 18:21-22, Matthew 6:14-15",
+      "key_teachings": [
+        "Forgive not seven times, but seventy-seven times",
+        "If you forgive others, your Father will forgive you",
+        "If you do not forgive, neither will your Father forgive you"
+      ],
+      "significance": "Unlimited forgiveness is essential for the Christian life."
+    },
+    {
+      "topic": "Love Your Enemies",
+      "reference": "Matthew 5:43-48",
+      "key_teachings": [
+        "Love your enemies and pray for those who persecute you",
+        "Be perfect as your Father is perfect",
+        "God makes His sun rise on the evil and the good"
+      ],
+      "significance": "Radical love that extends even to those who hate us."
+    },
+    {
+      "topic": "I Am the Way, the Truth, and the Life",
+      "reference": "John 14:6",
+      "key_teachings": [
+        "Jesus is the only way to the Father",
+        "Truth is found in Jesus",
+        "Eternal life comes through Jesus"
+      ],
+      "significance": "Jesus' exclusive claim to be the path to God."
+    },
+    {
+      "topic": "The Good Shepherd",
+      "reference": "John 10:1-18",
+      "key_teachings": [
+        "The good shepherd lays down his life for the sheep",
+        "The shepherd knows each sheep by name",
+        "The shepherd brings abundant life"
+      ],
+      "significance": "Jesus' loving care and sacrificial protection of his followers."
+    },
+    {
+      "topic": "Love One Another",
+      "reference": "John 13:34-35",
+      "key_teachings": [
+        "A new commandment: Love one another as I have loved you",
+        "By this everyone will know you are my disciples",
+        "Love as Jesus loved — sacrificially"
+      ],
+      "significance": "The distinctive mark of Christian discipleship is selfless love."
+    }
+  ],
+  "apostle_teachings": [
+    {
+      "apostle": "Paul",
+      "key_teachings": [
+        {
+          "topic": "Faith, Hope, and Love",
+          "reference": "1 Corinthians 13:13",
+          "text": "And now these three remain: faith, hope, and love. But the greatest of these is love.",
+          "meaning": "Love is the greatest virtue, surpassing faith and hope."
+        },
+        {
+          "topic": "The Fruit of the Spirit",
+          "reference": "Galatians 5:22-23",
+          "text": "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness, and self-control.",
+          "meaning": "These qualities are produced in us by the Holy Spirit, not by our own effort."
+        },
+        {
+          "topic": "All Things Work Together for Good",
+          "reference": "Romans 8:28",
+          "text": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+          "meaning": "God uses all circumstances, even difficult ones, for the good of his people."
+        },
+        {
+          "topic": "Strength in Weakness",
+          "reference": "2 Corinthians 12:9",
+          "text": "My grace is sufficient for you, for my power is made perfect in weakness.",
+          "meaning": "God's power works most powerfully when we are weak and dependent on Him."
+        },
+        {
+          "topic": "The Armor of God",
+          "reference": "Ephesians 6:10-18",
+          "text": "Put on the full armor of God, so that you can take your stand against the devil's schemes.",
+          "meaning": "Spiritual warfare requires divine protection and weapons: truth, righteousness, faith, salvation, prayer."
+        }
+      ]
+    },
+    {
+      "apostle": "John",
+      "key_teachings": [
+        {
+          "topic": "God is Love",
+          "reference": "1 John 4:8",
+          "text": "Whoever does not love does not know God, because God is love.",
+          "meaning": "Love is the very essence of God's nature."
+        },
+        {
+          "topic": "Love One Another",
+          "reference": "1 John 4:7",
+          "text": "Dear friends, let us love one another, for love comes from God. Everyone who loves has been born of God and knows God.",
+          "meaning": "Love for others is evidence of knowing God."
+        }
+      ]
+    },
+    {
+      "apostle": "Peter",
+      "key_teachings": [
+        {
+          "topic": "Cast All Your Anxiety on Him",
+          "reference": "1 Peter 5:7",
+          "text": "Cast all your anxiety on him because he cares for you.",
+          "meaning": "God cares deeply for us and wants us to give him all our worries."
+        },
+        {
+          "topic": "Living Hope",
+          "reference": "1 Peter 1:3",
+          "text": "Praise be to the God and Father of our Lord Jesus Christ! In his great mercy he has given us new birth into a living hope.",
+          "meaning": "Through resurrection, Christians have a living, active hope."
+        }
+      ]
+    }
+  ],
+  "psalms_and_proverbs": {
+    "selected_psalms": [
+      {
+        "reference": "Psalm 23",
+        "text": "The Lord is my shepherd; I shall not want. He makes me lie down in green pastures. He leads me beside still waters. He restores my soul.",
+        "meaning": "God provides, guides, and restores his people like a good shepherd."
+      },
+      {
+        "reference": "Psalm 46:10",
+        "text": "Be still, and know that I am God.",
+        "meaning": "In the midst of chaos, be still and trust in God's sovereignty."
+      },
+      {
+        "reference": "Psalm 91:1-2",
+        "text": "Whoever dwells in the shelter of the Most High will rest in the shadow of the Almighty. I will say of the Lord, 'He is my refuge and my fortress, my God, in whom I trust.'",
+        "meaning": "God is a refuge and protection for those who trust Him."
+      },
+      {
+        "reference": "Psalm 119:105",
+        "text": "Your word is a lamp for my feet, a light on my path.",
+        "meaning": "God's Word guides and illuminates our way through life."
+      },
+      {
+        "reference": "Psalm 139:14",
+        "text": "I praise you because I am fearfully and wonderfully made.",
+        "meaning": "Every person is a wonderful creation of God."
+      }
+    ],
+    "selected_proverbs": [
+      {
+        "reference": "Proverbs 3:5-6",
+        "text": "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
+        "meaning": "Total trust in God leads to guidance and direction."
+      },
+      {
+        "reference": "Proverbs 16:3",
+        "text": "Commit to the Lord whatever you do, and he will establish your plans.",
+        "meaning": "Dedicating our work to God brings success."
+      },
+      {
+        "reference": "Proverbs 22:6",
+        "text": "Start children off on the way they should go, and even when they are old they will not turn from it.",
+        "meaning": "Early training in righteousness shapes lifelong character."
+      },
+      {
+        "reference": "Proverbs 27:17",
+        "text": "As iron sharpens iron, so one person sharpens another.",
+        "meaning": "Good relationships help us grow and improve."
+      },
+      {
+        "reference": "Proverbs 31:25",
+        "text": "She is clothed with strength and dignity; she can laugh at the days to come.",
+        "meaning": "A virtuous woman is characterized by strength and confidence."
+      }
+    ]
+  },
+  "end_times": {
+    "key_events": [
+      {
+        "event": "The Second Coming of Christ",
+        "reference": "Matthew 24:30-31, Acts 1:11",
+        "description": "Jesus will return in glory to judge the living and the dead."
+      },
+      {
+        "event": "The Rapture",
+        "reference": "1 Thessalonians 4:16-17",
+        "description": "Believers will be caught up in the clouds to meet the Lord."
+      },
+      {
+        "event": "The Final Judgment",
+        "reference": "Revelation 20:11-15",
+        "description": "All people will be judged according to their deeds."
+      },
+      {
+        "event": "The New Heaven and New Earth",
+        "reference": "Revelation 21:1-4",
+        "description": "God will create a new heaven and earth where He dwells with humanity."
+      }
+    ]
+  },
+  "keywords": [
+    "bible", "jesus", "christ", "god", "lord", "holy spirit", "blessed",
+    "commandment", "parable", "prayer", "faith", "hope", "love", "grace",
+    "salvation", "sin", "forgiveness", "repentance", "heaven", "hell",
+    "genesis", "exodus", "psalms", "proverbs", "matthew", "mark", "luke",
+    "john", "acts", "romans", "corinthians", "galatians", "ephesians",
+    "revelation", "old testament", "new testament", "apostle", "disciple",
+    "miracle", "resurrection", "crucifixion", "cross", "gospel", "church",
+    "kingdom", "sermon", "mount", "good shepherd", "lost sheep",
+    "prodigal son", "ten commandments", "lord's prayer", "golden rule",
+    "beatitude", "fruit of spirit", "armor of god", "lord is my shepherd"
+  ],
+  "old_testament_books": [
+    "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy",
+    "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel",
+    "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles",
+    "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs",
+    "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations",
+    "Ezekiel", "Daniel", "Hosea", "Joel", "Amos",
+    "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk",
+    "Zephaniah", "Haggai", "Zechariah", "Malachi"
+  ],
+  "new_testament_books": [
+    "Matthew", "Mark", "Luke", "John", "Acts",
+    "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians",
+    "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians",
+    "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews",
+    "James", "1 Peter", "2 Peter", "1 John", "2 John",
+    "3 John", "Jude", "Revelation"
+  ]
+}

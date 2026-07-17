@@ -1,0 +1,668 @@
+{
+  "title": "Bhagavad Gita",
+  "description": "The Bhagavad Gita is a 700-verse Hindu scripture that is part of the epic Mahabharata. It is a dialogue between Prince Arjuna and Lord Krishna, who serves as his charioteer. The text addresses the moral and philosophical dilemmas faced by Arjuna on the battlefield of Kurukshetra.",
+  "total_verses": 700,
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "Arjuna Vishada Yoga",
+      "subtitle": "The Yoga of Arjuna's Dejection",
+      "verses": 47,
+      "summary": "Arjuna, overcome with grief and moral dilemma, sees his kinsmen, teachers, and friends arrayed against him on the battlefield. He lays down his bow, refusing to fight, and expresses his despair to Krishna.",
+      "key_teachings": [
+        "The importance of facing one's duty even when it is difficult",
+        "Arjuna's initial state of confusion and despair",
+        "The setting of the Kurukshetra war between Pandavas and Kauravas",
+        "The emotional and psychological turmoil before battle"
+      ],
+      "key_verses": [
+        {
+          "verse": "1.1",
+          "text": "Dhritarashtra said: O Sanjaya, what did my sons and the sons of Pandu do in the field of Kurukshetra?",
+          "meaning": "The opening verse sets the scene of the great battle, with King Dhritarashtra asking about the events."
+        },
+        {
+          "verse": "1.46",
+          "text": "Having said this, Arjuna, overcome with grief, cast aside his bow and arrow and sat down on the chariot.",
+          "meaning": "Arjuna collapses in despair, unable to bear the thought of fighting his own relatives and teachers."
+        }
+      ],
+      "context": "This chapter establishes the fundamental conflict - the moral dilemma of fighting one's own family members for a righteous cause."
+    },
+    {
+      "chapter": 2,
+      "title": "Sankhya Yoga",
+      "subtitle": "The Yoga of Knowledge",
+      "verses": 72,
+      "summary": "Krishna begins his philosophical teachings to Arjuna. He explains the nature of the eternal self (Atman), which is indestructible and beyond death. This chapter contains some of the most famous verses of the Gita.",
+      "key_teachings": [
+        "The soul (Atman) is eternal and cannot be killed",
+        "True wisdom means seeing beyond physical form to the eternal spirit",
+        "Selfless action without attachment to results (Karma Yoga)",
+        "The importance of equanimity in success and failure",
+        "Control of the senses and mind leads to peace"
+      ],
+      "key_verses": [
+        {
+          "verse": "2.20",
+          "text": "The soul is never born nor dies at any time. It has not come into being, does not come into being, and will not come into being. It is unborn, eternal, ever-existing, and primeval. It is not slain when the body is slain.",
+          "meaning": "The soul is eternal and indestructible. Death only affects the physical body, not the true self."
+        },
+        {
+          "verse": "2.47",
+          "text": "You have a right to perform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to inaction.",
+          "meaning": "Act according to duty without being attached to outcomes. This is the foundation of Karma Yoga."
+        },
+        {
+          "verse": "2.14",
+          "text": "O son of Kunti, the contacts of the senses with their objects give rise to feelings of heat and cold, pleasure and pain. They come and go, they are impermanent. Bear them patiently, O Bharata.",
+          "meaning": "Sensory experiences are temporary. One should develop patience and equanimity toward them."
+        },
+        {
+          "verse": "2.71",
+          "text": "A person who has given up all desires for sense gratification, who lives free from desires, who has given up all sense of proprietorship, and who is free from false ego — such a person attains peace.",
+          "meaning": "True peace comes from renouncing ego, ownership, and selfish desires."
+        }
+      ],
+      "context": "This chapter is considered the essence of the Gita's teaching. Krishna establishes the philosophical foundation for everything that follows."
+    },
+    {
+      "chapter": 3,
+      "title": "Karma Yoga",
+      "subtitle": "The Yoga of Action",
+      "verses": 43,
+      "summary": "Krishna explains the importance of performing one's duty (svadharma) without attachment. He teaches that action is necessary for the maintenance of the world, and that even he engages in action.",
+      "key_teachings": [
+        "Action is necessary; inaction leads to degradation",
+        "Perform duty without attachment to results",
+        "Even enlightened beings act for the welfare of the world",
+        "Desire and anger are the great enemies of wisdom",
+        "Self-discipline and control of the mind are essential"
+      ],
+      "key_verses": [
+        {
+          "verse": "3.3",
+          "text": "The Supreme Lord said: O sinless one, there are two ways of thinking in this world: the path of knowledge (Sankhya) and the path of action (Yoga).",
+          "meaning": "Two main paths to liberation: knowledge (jnana) and selfless action (karma yoga)."
+        },
+        {
+          "verse": "3.19",
+          "text": "Therefore, without being attached to the fruits of activities, one should act as a matter of duty, for by working without attachment one attains the Supreme.",
+          "meaning": "Working without attachment to outcomes leads to liberation."
+        },
+        {
+          "verse": "3.37",
+          "text": "The Supreme Lord said: It is lust (kama) that is born of contact with the material mode of passion, later transformed into wrath, and which is the great devourer and most sinful.",
+          "meaning": "Lust (uncontrolled desire) is the primary obstacle to spiritual progress."
+        },
+        {
+          "verse": "3.43",
+          "text": "Thus knowing the soul to be superior to the material intellect, and mastering the mind, one should destroy this enemy in the form of lust, which is very difficult to overcome.",
+          "meaning": "One must use spiritual knowledge to overcome the powerful enemy of uncontrolled desire."
+        }
+      ],
+      "context": "This chapter addresses the practical question: If the self is eternal, why should one act at all? Krishna explains that action is the very nature of the world."
+    },
+    {
+      "chapter": 4,
+      "title": "Jnana Karma Sannyasa Yoga",
+      "subtitle": "The Yoga of Knowledge and Renunciation of Action",
+      "verses": 42,
+      "summary": "Krishna reveals the origin of this wisdom, explaining that he has taught it to ancient sages. He describes the nature of divine incarnation and the path of knowledge that transcends both action and inaction.",
+      "key_teachings": [
+        "This wisdom is eternal and has been passed through ages",
+        "Divine incarnation (avatar) occurs to restore righteousness",
+        "True renunciation is mental, not physical",
+        "Knowledge purifies the mind and destroys ignorance",
+        "Even karma yoga eventually leads to jnana (knowledge)"
+      ],
+      "key_verses": [
+        {
+          "verse": "4.7",
+          "text": "Whenever there is a decline of righteousness and an increase in unrighteousness, O Arjuna, at that time I manifest myself on earth.",
+          "meaning": "God incarnates to restore dharma whenever it declines. This is the concept of avatar."
+        },
+        {
+          "verse": "4.8",
+          "text": "To protect the good, to destroy the wicked, and to establish righteousness, I manifest myself age after age.",
+          "meaning": "The three purposes of divine incarnation: protection of the good, destruction of evil, and restoration of dharma."
+        },
+        {
+          "verse": "4.18",
+          "text": "Those who see action in inaction and inaction in action are wise among men. They are yogis who have performed all actions.",
+          "meaning": "True wisdom sees the deeper reality beyond surface-level action and inaction."
+        }
+      ],
+      "context": "This chapter bridges knowledge and action, showing they are ultimately not different paths."
+    },
+    {
+      "chapter": 5,
+      "title": "Karma Sannyasa Yoga",
+      "subtitle": "The Yoga of Renunciation of Action",
+      "verses": 29,
+      "summary": "Krishna teaches that both renunciation of action and the yoga of action lead to liberation. However, the path of selfless action is superior to mere renunciation. He describes the state of the liberated soul.",
+      "key_teachings": [
+        "Both knowledge and action lead to liberation, but action is superior",
+        "The liberated person sees all beings as equal",
+        "Inner renunciation is more important than external renunciation",
+        "The sage who has controlled the mind attains peace",
+        "God dwells in all beings as the supreme friend"
+      ],
+      "key_verses": [
+        {
+          "verse": "5.18",
+          "text": "The truly learned, with the eyes of perfect knowledge, see with equal vision a Brahmin, a cow, an elephant, a dog, and a dog-eater.",
+          "meaning": "A wise person sees the same divine spirit in all beings, regardless of external differences."
+        },
+        {
+          "verse": "5.25",
+          "text": "Those who are free from all impurities and have controlled their minds, who are freed from faults and attain liberation through Brahman, their sins are burnt up by the fire of knowledge.",
+          "meaning": "Spiritual knowledge burns away all sinful reactions and leads to liberation."
+        }
+      ],
+      "context": "This chapter resolves the apparent contradiction between action and renunciation."
+    },
+    {
+      "chapter": 6,
+      "title": "Dhyana Yoga",
+      "subtitle": "The Yoga of Meditation",
+      "verses": 47,
+      "summary": "Krishna teaches the practice of meditation, explaining how to control the mind and achieve steady concentration. He describes the qualities of a successful meditator and the benefits of regular practice.",
+      "key_teachings": [
+        "Meditation is the direct path to self-realization",
+        "The mind is both the friend and enemy of the soul",
+        "Regular practice in a secluded place is essential",
+        "The Yogi who controls the mind achieves peace",
+        "Even partial success in yoga protects one from rebirth"
+      ],
+      "key_verses": [
+        {
+          "verse": "6.5",
+          "text": "One must elevate oneself by one's own mind, not degrade oneself. The mind is the friend of the conditioned soul, and its enemy as well.",
+          "meaning": "The mind can be either our greatest ally or worst enemy depending on whether we control it or let it control us."
+        },
+        {
+          "verse": "6.6",
+          "text": "For him who has conquered the mind, the mind is the best of friends; but for one who has failed to do so, the mind will remain the greatest enemy.",
+          "meaning": "Mind control is the key to spiritual success."
+        },
+        {
+          "verse": "6.35",
+          "text": "The Supreme Lord said: Without doubt, the mind is restless and difficult to control. But through practice (abhyasa) and detachment (vairagya), it can be restrained.",
+          "meaning": "The two tools for mind control: consistent practice and non-attachment."
+        },
+        {
+          "verse": "6.46",
+          "text": "A yogi is considered the best of all, whether equal to or better than one who practices austerity or is learned in the Vedas.",
+          "meaning": "The meditator (yogi) holds the highest position among spiritual practitioners."
+        }
+      ],
+      "context": "This chapter provides practical meditation instructions, making the philosophical teachings experiential."
+    },
+    {
+      "chapter": 7,
+      "title": "Jnana Vijnana Yoga",
+      "subtitle": "The Yoga of Knowledge and Wisdom",
+      "verses": 30,
+      "summary": "Krishna reveals his divine nature and opulences. He explains that he is the source of everything and that all beings exist within him. He distinguishes between those who are deluded by maya and those who seek him with devotion.",
+      "key_teachings": [
+        "Krishna is the Supreme Being, the source of all existence",
+        "Material energy (maya) keeps souls bound to the world",
+        "Four types of people worship God: the distressed, the seekers of knowledge, the seekers of wealth, and the wise",
+        "The wise person with constant devotion is the most dear to God",
+        "True knowledge means understanding God as the ultimate cause"
+      ],
+      "key_verses": [
+        {
+          "verse": "7.7",
+          "text": "O conqueror of wealth, there is no truth superior to Me. Everything rests upon Me, as pearls are strung on a thread.",
+          "meaning": "God is the supreme truth on which everything depends, just as pearls depend on the thread."
+        },
+        {
+          "verse": "7.14",
+          "text": "This divine energy of Mine, consisting of the three modes of material nature, is very difficult to transcend. But those who have surrendered unto Me can easily cross beyond it.",
+          "meaning": "Only devotion and surrender to God can free one from the bondage of material nature."
+        },
+        {
+          "verse": "7.21",
+          "text": "I am in everyone's heart as the Supersoul. As soon as one desires to worship some demigod, I make his faith steady so that he can devote himself to that particular deity.",
+          "meaning": "God resides in everyone's heart and supports all forms of worship."
+        }
+      ],
+      "context": "This chapter marks a shift from impersonal philosophy to personal devotion."
+    },
+    {
+      "chapter": 8,
+      "title": "Aksara Brahma Yoga",
+      "subtitle": "The Yoga of the Imperishable Brahman",
+      "verses": 28,
+      "summary": "Krishna explains the nature of Brahman (the Absolute), the individual soul, and karma. He describes what happens at death and how one's thoughts at the moment of death determine the next birth.",
+      "key_teachings": [
+        "Brahman is the supreme, imperishable reality",
+        "The nature of the soul and its relationship to God",
+        "What one thinks at death determines the next birth",
+        "Remembering God at the time of death leads to liberation",
+        "There are two paths: the bright path (to light) and the dark path (to rebirth)"
+      ],
+      "key_verses": [
+        {
+          "verse": "8.5",
+          "text": "And whoever, at the time of death, quits his body remembering Me alone — at once he attains My nature. Of this there is no doubt.",
+          "meaning": "Remembering God at the moment of death ensures liberation."
+        },
+        {
+          "verse": "8.6",
+          "text": "Whatever state of being one remembers when he quits his body, that state he will attain without fail.",
+          "meaning": "One's mental state at death determines the nature of the next birth."
+        },
+        {
+          "verse": "8.14",
+          "text": "For one who always remembers Me without deviation, I am easy to attain, O Arjuna, because he is always devoted to Me.",
+          "meaning": "Constant remembrance of God makes liberation easily attainable."
+        }
+      ],
+      "context": "This chapter addresses death and what lies beyond, a universal human concern."
+    },
+    {
+      "chapter": 9,
+      "title": "Raja Vidya Guhya Yoga",
+      "subtitle": "The Yoga of the King of Knowledge",
+      "verses": 34,
+      "summary": "Krishna reveals the most confidential knowledge — pure devotion. He explains that all offerings made with devotion are accepted by him, and that he equally rewards all who worship him.",
+      "key_teachings": [
+        "Devotion (bhakti) is the supreme secret of spiritual life",
+        "God accepts all sincere offerings, even a leaf or water",
+        "Everyone is equal before God — caste, status, gender don't matter",
+        "Even sinners can become saintly through devoted service",
+        "Constant remembrance and worship of God leads to liberation"
+      ],
+      "key_verses": [
+        {
+          "verse": "9.22",
+          "text": "But those who always worship Me with exclusive devotion, meditating on My transcendental form — to them I carry what they lack, and I preserve what they have.",
+          "meaning": "God personally takes care of his devoted devotees."
+        },
+        {
+          "verse": "9.26",
+          "text": "If one offers Me with love and devotion a leaf, a flower, fruit, or water, I will accept it.",
+          "meaning": "God accepts even the simplest offerings when made with love and devotion."
+        },
+        {
+          "verse": "9.30",
+          "text": "Even if one commits the most abominable action, if he is engaged in devotional service, he is to be considered saintly because he is rightly situated.",
+          "meaning": "Devotion purifies even the most sinful person."
+        },
+        {
+          "verse": "9.34",
+          "text": "Engage your mind always in thinking of Me, offer obeisances and worship Me. Being completely absorbed in Me, surely you will come to Me.",
+          "meaning": "Complete absorption in God through thought, word, and deed leads to liberation."
+        }
+      ],
+      "context": "This chapter reveals bhakti (devotion) as the highest spiritual path."
+    },
+    {
+      "chapter": 10,
+      "title": "Vibhuti Yoga",
+      "subtitle": "The Yoga of Divine Glories",
+      "verses": 42,
+      "summary": "Krishna describes his various divine manifestations (vibhutis) in the world. He explains that he is the source of all great qualities and that his glories are infinite and impossible to fully describe.",
+      "key_teachings": [
+        "God manifests in countless forms throughout creation",
+        "Everything great in the world is a fraction of God's glory",
+        "The universe is maintained by a fraction of God's power",
+        "God is the source of all spiritual and material perfections",
+        "Only a small portion of his glories can be described"
+      ],
+      "key_verses": [
+        {
+          "verse": "10.8",
+          "text": "I am the source of all spiritual and material worlds. Everything emanates from Me. The wise who perfectly know this engage in My devotional service and worship Me with all their hearts.",
+          "meaning": "God is the ultimate source of everything in existence."
+        },
+        {
+          "verse": "10.20",
+          "text": "I am the Supersoul, O Arjuna, seated in the hearts of all living entities. I am the beginning, the middle, and the end of all beings.",
+          "meaning": "God pervades all living beings as the innermost self."
+        },
+        {
+          "verse": "10.41",
+          "text": "Know that all beautiful, glorious, and mighty creations spring from but a spark of My splendor.",
+          "meaning": "All beauty and greatness in the world are merely reflections of God's infinite glory."
+        }
+      ],
+      "context": "This chapter reveals the universal presence of God in all things."
+    },
+    {
+      "chapter": 11,
+      "title": "Vishvarupa Darshana Yoga",
+      "subtitle": "The Yoga of the Universal Form",
+      "verses": 55,
+      "summary": "At Arjuna's request, Krishna reveals his universal form (Vishvarupa) — an awe-inspiring cosmic vision encompassing all of creation, all beings, and all of time. Arjuna is overwhelmed by this vision.",
+      "key_teachings": [
+        "God's universal form encompasses all of creation",
+        "The cosmic vision reveals the totality of divine power",
+        "Even gods and sages are amazed by this form",
+        "The universal form includes creation, preservation, and destruction",
+        "After the vision, Krishna returns to his gentle form"
+      ],
+      "key_verses": [
+        {
+          "verse": "11.54",
+          "text": "My dear Arjuna, only by undivided devotional service can I be worshipped in My form, can I be approached, and can I be known and seen face to face.",
+          "meaning": "The universal form can only be truly understood through devotion, not just intellectual knowledge."
+        },
+        {
+          "verse": "11.55",
+          "text": "He who works for Me, who is devoted to Me, who is my devotee, who has no attachment, and who is free from enmity toward all beings — such a person comes to Me.",
+          "meaning": "The path to God through selfless devotion and non-attachment."
+        }
+      ],
+      "context": "This chapter provides a direct experience of God's infinity, a peak mystical moment in the Gita."
+    },
+    {
+      "chapter": 12,
+      "title": "Bhakti Yoga",
+      "subtitle": "The Yoga of Devotion",
+      "verses": 20,
+      "summary": "Arjuna asks whether it is better to worship the formless Brahman or the personal God. Krishna explains that both paths lead to liberation, but devotion to the personal form is easier and more practical.",
+      "key_teachings": [
+        "Devotion to the personal God is the easiest path",
+        "The qualities of a true devotee include equality, compassion, and selflessness",
+        "God's devotees are more dear to him than even the Vedas",
+        "Both impersonal and personal worship lead to the same goal",
+        "The devotee who takes refuge in God alone is most dear"
+      ],
+      "key_verses": [
+        {
+          "verse": "12.2",
+          "text": "The Supreme Lord said: Those who worship Me with devotion, meditating on My transcendental form — to them I carry what they lack and preserve what they have.",
+          "meaning": "God personally takes care of his devoted worshippers."
+        },
+        {
+          "verse": "12.13-14",
+          "text": "One who is not envious but is a kind friend to all living entities, who does not think himself a proprietor, who is free from false ego and equal both in happiness and distress, who is always satisfied and engaged in devotional service with determination, whose mind and intelligence are fixed on Me — such a devotee of Mine is very dear to Me.",
+          "meaning": "The qualities of a beloved devotee: non-envious, friendly, non-possessive, equal-minded, devoted, and steady."
+        },
+        {
+          "verse": "12.20",
+          "text": "Those who follow this imperishable path of devotional service and who completely engage themselves with faith, making Me the supreme goal, are very, very dear to Me.",
+          "meaning": "Devotees who make God their supreme goal are most dear to him."
+        }
+      ],
+      "context": "This chapter establishes bhakti (devotion) as the preferred and most accessible spiritual path."
+    },
+    {
+      "chapter": 13,
+      "title": "Prakriti Purusha Yoga",
+      "subtitle": "The Yoga of Nature and Spirit",
+      "verses": 35,
+      "summary": "Krishna explains the distinction between the material nature (Prakriti) and the conscious spirit (Purusha). He describes the 20 qualities that constitute the field of knowledge (kshetra) and the knower of the field.",
+      "key_teachings": [
+        "The body is the field (kshetra), and the soul is the knower of the field",
+        "Knowledge means understanding the distinction between matter and spirit",
+        "The 20 qualities of the material nature include the elements, senses, and mind",
+        "Liberation comes from understanding the true nature of the self",
+        "God is the ultimate cause, present as the Supersoul in every heart"
+      ],
+      "key_verses": [
+        {
+          "verse": "13.22",
+          "text": "The Purusha, being higher than nature, causes the soul to take birth in the material world according to the quality of material nature it is exposed to.",
+          "meaning": "The soul's experiences are determined by its interaction with material nature."
+        },
+        {
+          "verse": "13.30",
+          "text": "When one sees that all activities are carried out by the three modes of nature and understands that the Supreme Soul is not performing them, he attains liberation.",
+          "meaning": "Recognizing that nature acts, not the soul, leads to liberation."
+        }
+      ],
+      "context": "This chapter provides the metaphysical foundation for understanding the self's relationship with nature and God."
+    },
+    {
+      "chapter": 14,
+      "title": "Gunatraya Vibhaga Yoga",
+      "subtitle": "The Yoga of the Division of the Three Modes",
+      "verses": 27,
+      "summary": "Krishna explains the three modes of material nature: goodness (sattva), passion (rajas), and ignorance (tamas). He describes how these modes affect human behavior and how to transcend them.",
+      "key_teachings": [
+        "The three modes bind the soul to the material world",
+        "Goodness brings knowledge, passion brings desire, ignorance brings delusion",
+        "The modes互相影响和转化",
+        "Transcending all three modes leads to liberation",
+        "God is beyond all modes and sustains everything"
+      ],
+      "key_verses": [
+        {
+          "verse": "14.5",
+          "text": "Material nature consists of three modes: goodness (sattva), passion (rajas), and ignorance (tamas). These modes bind the imperishable soul to the material body.",
+          "meaning": "The three gunas are the forces that keep souls bound to material existence."
+        },
+        {
+          "verse": "14.10-11",
+          "text": "Sometimes the mode of goodness becomes prominent, sometimes the mode of passion, and sometimes the mode of ignorance. The mode of goodness is illuminating, the mode of passion is active, and the mode of ignorance is deluding.",
+          "meaning": "The three modes compete for dominance and manifest differently in different situations."
+        },
+        {
+          "verse": "14.26",
+          "text": "One who serves Me with unswerving devotion transcends the modes of material nature and becomes fit for association with Brahman.",
+          "meaning": "Devotion to God enables transcendence of the three modes."
+        }
+      ],
+      "context": "This chapter explains the mechanics of material bondage and how to transcend it."
+    },
+    {
+      "chapter": 15,
+      "title": "Purushottama Yoga",
+      "subtitle": "The Yoga of the Supreme Person",
+      "verses": 20,
+      "summary": "Krishna reveals himself as the Supreme Person (Purushottama) who is higher than both the material nature and the individual soul. He describes the cosmic tree of material existence and how to cut it down.",
+      "key_teachings": [
+        "The material world is like a cosmic tree with roots above and branches below",
+        "Knowledge and detachment are the axe to cut this tree",
+        "The Supreme Person is beyond both the material world and the individual soul",
+        "God's energy is divided into animate (sentient) and inanimate (material)",
+        "Freedom comes from taking refuge in the Supreme"
+      ],
+      "key_verses": [
+        {
+          "verse": "15.15",
+          "text": "I am seated in everyone's heart, and from Me come remembrance, knowledge, and forgetfulness. I am the Veda as well as the Vedanta.",
+          "meaning": "God is the source of all knowledge and memory, the essence of all scripture."
+        },
+        {
+          "verse": "15.18",
+          "text": "Because I am transcendental, beyond both the fallible and the infallible, and because I am the Greatest, I am known as Purushottama — the Supreme Person.",
+          "meaning": "The Supreme Person transcends all categories and is the highest reality."
+        }
+      ],
+      "context": "This chapter provides the most complete description of God's transcendental nature."
+    },
+    {
+      "chapter": 16,
+      "title": "Daivasura Sampad Yoga",
+      "subtitle": "The Yoga of Divine and Demonic Qualities",
+      "verses": 24,
+      "summary": "Krishna classifies human beings into two categories: those with divine qualities (daivi sampat) and those with demonic qualities (asuri sampat). He lists the characteristics of each and warns of the consequences of demonic behavior.",
+      "key_teachings": [
+        "Divine qualities lead to liberation; demonic qualities lead to bondage",
+        "Divine qualities include: fearlessness, purity, knowledge, self-control",
+        "Demonic qualities include: hypocrisy, anger, pride, lust, deceit",
+        "Demonic people deny God and indulge in excessive materialism",
+        "Scripture should guide one's actions, not personal whim"
+      ],
+      "key_verses": [
+        {
+          "verse": "16.3",
+          "text": "Fearlessness, purity of heart, steadfastness in knowledge and yoga, charity, self-control, sacrifice, study of scriptures, austerity, straightforwardness, non-violence, truth, absence of anger, renunciation, peace, absence of crookedness, compassion toward beings, non-covetousness, gentleness, modesty, absence of fickleness.",
+          "meaning": "The 26 divine qualities that lead to spiritual progress."
+        },
+        {
+          "verse": "16.4",
+          "text": "Pride, arrogance, conceit, anger, harshness, and ignorance — these are the qualities of those with demonic nature.",
+          "meaning": "The negative qualities that characterize a demonic nature."
+        },
+        {
+          "verse": "16.24",
+          "text": "Therefore, one should understand what is duty and what is not duty by the regulations of the scriptures. Knowing such regulations, one should act so as to gradually attain perfection.",
+          "meaning": "Scriptural guidelines should determine one's actions."
+        }
+      ],
+      "context": "This chapter provides a moral framework for distinguishing between spiritual and anti-spiritual qualities."
+    },
+    {
+      "chapter": 17,
+      "title": "Shraddhatraya Vibhaga Yoga",
+      "subtitle": "The Yoga of the Division of Faith",
+      "verses": 28,
+      "summary": "Krishna explains that faith is of three types — in goodness, passion, or ignorance — determined by one's nature. He also classifies food, sacrifice, austerity, and charity according to the three modes.",
+      "key_teachings": [
+        "Faith is determined by one's inherent nature",
+        "Food, worship, austerity, and charity can be classified by the three modes",
+        "Sattvic (goodness) activities are pure and beneficial",
+        "Rajasic (passion) activities are done for ego or gain",
+        "Tamasic (ignorance) activities are harmful and deluding"
+      ],
+      "key_verses": [
+        {
+          "verse": "17.3",
+          "text": "O Arjuna, the faith of each is in accordance with one's nature. The person is made of faith. Whatever the faith, that verily is the person.",
+          "meaning": "A person's faith reflects their fundamental nature."
+        },
+        {
+          "verse": "17.14",
+          "text": "Austerity performed with faith by men who do not desire fruitive results and who think, 'This is my duty,' is in the mode of goodness.",
+          "meaning": "Duty performed without attachment to results is sattvic austerity."
+        }
+      ],
+      "context": "This chapter connects psychology and spirituality through the concept of faith."
+    },
+    {
+      "chapter": 18,
+      "title": "Moksha Sannyasa Yoga",
+      "subtitle": "The Yoga of Liberation through Renunciation",
+      "verses": 78,
+      "summary": "The final and longest chapter summarizes the entire teaching of the Gita. Krishna discusses the nature of renunciation and the three types of action: obligatory, desireless, and forbidden. He describes the characteristics of the liberated soul and concludes with his most important instruction.",
+      "key_teachings": [
+        "Renunciation (sannyasa) and yoga are closely related",
+        "Actions performed as duty, without attachment, lead to liberation",
+        "The liberated soul is free from ego, desire, and delusion",
+        "Knowledge, action, and devotion are all paths to God",
+        "Surrender completely to God — this is the final teaching"
+      ],
+      "key_verses": [
+        {
+          "verse": "18.45",
+          "text": "By dedicating his own duties to the Supreme Lord who dwells in all beings, a person attains perfection through divine grace.",
+          "meaning": "Dedicating all actions to God leads to perfection."
+        },
+        {
+          "verse": "18.62",
+          "text": "O Arjuna, surrendering all your duties unto the Supreme Lord, take refuge in Him alone. By His grace, you will attain perfect peace and the supreme abode.",
+          "meaning": "Complete surrender to God brings ultimate peace and liberation."
+        },
+        {
+          "verse": "18.65",
+          "text": "Always think of Me, become My devotee, worship Me, offer your homage to Me. Thus you will certainly come to Me. I promise you this because you are My very dear friend.",
+          "meaning": "God's personal promise to those who worship him with love."
+        },
+        {
+          "verse": "18.66",
+          "text": "Abandon all varieties of duty and just surrender unto Me. I shall deliver you from all sinful reactions. Do not grieve.",
+          "meaning": "The most famous verse of the Gita — complete surrender to God. This is the ultimate teaching."
+        }
+      ],
+      "context": "This chapter is the culmination of the entire Gita. The famous 'Charama Shloka' (18.66) represents the highest teaching: complete surrender to God."
+    }
+  ],
+  "core_teachings": {
+    "karma_yoga": {
+      "title": "Karma Yoga (Path of Action)",
+      "description": "Performing one's duty without attachment to results. Every action should be done as an offering to God, without seeking personal gain.",
+      "key_principle": "You have the right to work, but never to the fruits of work.",
+      "reference": "Chapter 2, Verse 47"
+    },
+    "jnana_yoga": {
+      "title": "Jnana Yoga (Path of Knowledge)",
+      "description": "The pursuit of spiritual knowledge and self-realization. Understanding the distinction between the eternal self and the temporary body.",
+      "key_principle": "The soul is never born nor dies. It is eternal and indestructible.",
+      "reference": "Chapter 2, Verse 20"
+    },
+    "bhakti_yoga": {
+      "title": "Bhakti Yoga (Path of Devotion)",
+      "description": "Loving devotion to God. Complete surrender and personal relationship with the divine. Considered the easiest and most accessible path.",
+      "key_principle": "Surrender unto Me alone. I shall deliver you from all sinful reactions.",
+      "reference": "Chapter 18, Verse 66"
+    },
+    "dhyana_yoga": {
+      "title": "Dhyana Yoga (Path of Meditation)",
+      "description": "Practicing meditation to control the mind and realize the self. Regular practice in a quiet place, focusing the mind on God.",
+      "key_principle": "The mind is the friend of the conditioned soul, and its enemy as well.",
+      "reference": "Chapter 6, Verse 5"
+    },
+    "atman": {
+      "title": "Atman (The Soul)",
+      "description": "The eternal, indestructible self that resides within every living being. The true nature of the self is pure consciousness, distinct from the physical body.",
+      "key_principle": "The soul is never born nor dies. It is unborn, eternal, ever-existing.",
+      "reference": "Chapter 2, Verse 20"
+    },
+    "dharma": {
+      "title": "Dharma (Duty/Righteousness)",
+      "description": "One's sacred duty based on one's position in life. Acting according to dharma maintains cosmic order.",
+      "key_principle": "It is better to perform one's own duty imperfectly than to perform another's duty perfectly.",
+      "reference": "Chapter 3, Verse 35"
+    },
+    "yoga": {
+      "title": "Yoga (Union with God)",
+      "description": "The systematic practice of connecting with the divine through action, knowledge, devotion, or meditation.",
+      "key_principle": "Yoga is the journey of the self, through the self, to the self.",
+      "reference": "Chapter 6, Verse 20-23"
+    },
+    "sattva_rajas_tamas": {
+      "title": "The Three Gunas (Modes of Nature)",
+      "description": "Sattva (goodness/knowledge), Rajas (passion/desire), and Tamas (ignorance/delusion). These three modes bind the soul to the material world.",
+      "key_principle": "The three modes bind the imperishable soul to the material body.",
+      "reference": "Chapter 14, Verse 5"
+    }
+  },
+  "famous_verses": [
+    {
+      "verse": "2.47",
+      "text": "Karmanye vadhikaraste ma phaleshu kadachana",
+      "translation": "You have the right to work, but never to the fruit of work.",
+      "significance": "The most quoted verse of the Gita, teaching selfless action"
+    },
+    {
+      "verse": "2.20",
+      "text": "Na jayate mriyate va kadachin",
+      "translation": "The soul is never born nor does it die.",
+      "significance": "The fundamental teaching about the eternal nature of the soul"
+    },
+    {
+      "verse": "18.66",
+      "text": "Sarva dharman parityajya mam ekam sharanam vraja",
+      "translation": "Abandon all duties and surrender unto Me alone.",
+      "significance": "The supreme teaching of complete surrender to God"
+    },
+    {
+      "verse": "4.7-8",
+      "text": "Yada yada hi dharmasya glanir bhavati",
+      "translation": "Whenever there is a decline of righteousness, I manifest myself.",
+      "significance": "The concept of divine incarnation (avatar)"
+    },
+    {
+      "verse": "6.5",
+      "text": "Uddhared atmanatmanam",
+      "translation": "Elevate yourself by your own mind.",
+      "significance": "Teaching about self-mastery and the power of the mind"
+    }
+  ],
+  "keywords": [
+    "bhagavad gita", "krishna", "arjuna", "dharma", "karma", "yoga", "meditation",
+    "soul", "atman", "brahman", "devotion", "bhakti", "knowledge", "jnana",
+    "action", "duty", "renunciation", "sannyasa", "liberation", "moksha",
+    "reincarnation", "samsara", "gunas", "sattva", "rajas", "tamas",
+    "mahabharata", "kurukshetra", "geeta", "gita", "surrender", "faith",
+    "vedanta", "philosophy", "spirituality", "god", "krishna", "vishnu",
+    "paramatman", "supersoul", "supreme being", "avatar", "incarnation"
+  ]
+}

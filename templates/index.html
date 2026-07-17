@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malati — AI Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── Animated background ─────────────────────────────────── -->
+  <div class="bg-canvas" id="bgCanvas"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!-- ── Scattering stars & moons ────────────────────────────── -->
+  <div class="scatter-wrap" id="scatterWrap"></div>
+  <div class="crescent crescent-1"></div>
+  <div class="crescent crescent-2"></div>
+  <div class="crescent crescent-3"></div>
+
+  <!-- ── App shell ────────────────────────────────────────────── -->
+  <div class="app-wrapper">
+
+    <!-- ── Hero section ─────────────────────────────────────── -->
+    <div class="hero-section">
+      <div class="hero-avatar">
+        <div class="malati-avatar malati-avatar--hero">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body -->
+            <ellipse cx="60" cy="95" rx="28" ry="18" fill="url(#bodyGrad)" opacity="0.9"/>
+            <!-- Head -->
+            <circle cx="60" cy="45" r="30" fill="url(#headGrad)"/>
+            <!-- Blush -->
+            <ellipse cx="42" cy="52" rx="6" ry="4" fill="#f9a8d4" opacity="0.5"/>
+            <ellipse cx="78" cy="52" rx="6" ry="4" fill="#f9a8d4" opacity="0.5"/>
+            <!-- Eyes -->
+            <g class="malati-eyes">
+              <ellipse cx="48" cy="42" rx="4" ry="4.5" fill="#1e293b"/>
+              <ellipse cx="72" cy="42" rx="4" ry="4.5" fill="#1e293b"/>
+              <circle cx="49.5" cy="40.5" r="1.5" fill="#fff"/>
+              <circle cx="73.5" cy="40.5" r="1.5" fill="#fff"/>
+            </g>
+            <!-- Smile -->
+            <path d="M50 54 Q60 63 70 54" fill="none" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round"/>
+            <!-- Hair strands -->
+            <path d="M35 35 Q38 15 60 18 Q82 15 85 35" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.5"/>
+            <path d="M32 40 Q36 22 60 20 Q84 22 88 40" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.3"/>
+            <!-- Left arm (waving!) -->
+            <g class="malati-wave-arm">
+              <path d="M32 80 Q18 60 14 42" fill="none" stroke="url(#armGrad)" stroke-width="6" stroke-linecap="round"/>
+              <!-- Hand -->
+              <circle cx="14" cy="40" r="6" fill="#fbbf24"/>
+              <!-- Fingers waving -->
+              <g class="malati-wave-fingers">
+                <line x1="11" y1="35" x2="9" y2="28" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="14" y1="34" x2="14" y2="26" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="17" y1="35" x2="19" y2="28" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </g>
+            <!-- Right arm -->
+            <path d="M88 80 Q98 72 102 65" fill="none" stroke="url(#armGrad)" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="102" cy="64" r="5" fill="#fbbf24"/>
+            <!-- Gradient defs -->
+            <defs>
+              <linearGradient id="headGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fde68a"/>
+                <stop offset="100%" stop-color="#fbbf24"/>
+              </linearGradient>
+              <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6366f1"/>
+                <stop offset="100%" stop-color="#8b5cf6"/>
+              </linearGradient>
+              <linearGradient id="armGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#fbbf24"/>
+                <stop offset="100%" stop-color="#f59e0b"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="hero-avatar-ring"></div>
+      </div>
+      <h1 class="hero-title">Malati</h1>
+      <p class="hero-tagline">Your AI companion — fast, smart, always ready to help.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">🌐 Web Search</span>
+        <span class="hero-pill">🧠 Multi-Model AI</span>
+        <span class="hero-pill">🕉️ Bhagavad Gita</span>
+        <span class="hero-pill">✝️ Bible</span>
+        <span class="hero-pill">🎨 Dark &amp; Light Mode</span>
+      </div>
+    </div>
+
+    <!-- ── Chat card ──────────────────────────────────────────── -->
+    <div class="chat-card" role="main">
+
+      <!-- Header -->
+      <header class="chat-header">
+        <div class="header-left">
+          <div class="avatar" aria-hidden="true">
+            <div class="malati-avatar malati-avatar--small">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="60" cy="95" rx="28" ry="18" fill="#6366f1" opacity="0.9"/>
+                <circle cx="60" cy="45" r="30" fill="url(#headGradSm)"/>
+                <ellipse cx="42" cy="52" rx="5" ry="3.5" fill="#f9a8d4" opacity="0.5"/>
+                <ellipse cx="78" cy="52" rx="5" ry="3.5" fill="#f9a8d4" opacity="0.5"/>
+                <g class="malati-eyes">
+                  <ellipse cx="48" cy="42" rx="4" ry="4.5" fill="#1e293b"/>
+                  <ellipse cx="72" cy="42" rx="4" ry="4.5" fill="#1e293b"/>
+                  <circle cx="49.5" cy="40.5" r="1.5" fill="#fff"/>
+                  <circle cx="73.5" cy="40.5" r="1.5" fill="#fff"/>
+                </g>
+                <path d="M50 54 Q60 63 70 54" fill="none" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round"/>
+                <g class="malati-wave-arm">
+                  <path d="M32 80 Q18 60 14 42" fill="none" stroke="#fbbf24" stroke-width="6" stroke-linecap="round"/>
+                  <circle cx="14" cy="40" r="6" fill="#fbbf24"/>
+                  <g class="malati-wave-fingers">
+                    <line x1="11" y1="35" x2="9" y2="28" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="14" y1="34" x2="14" y2="26" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="17" y1="35" x2="19" y2="28" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+                </g>
+                <path d="M88 80 Q98 72 102 65" fill="none" stroke="#fbbf24" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="102" cy="64" r="5" fill="#fbbf24"/>
+                <defs>
+                  <linearGradient id="headGradSm" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fde68a"/>
+                    <stop offset="100%" stop-color="#fbbf24"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="status-dot" title="Online"></span>
+          </div>
+          <div class="header-info">
+            <h1 class="bot-name">Malati</h1>
+            <p class="bot-status" id="headerStatus">Namaste! Ready to chat 🙏</p>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <!-- Theme toggle -->
+          <button
+            id="themeToggle"
+            class="icon-btn"
+            aria-label="Toggle light/dark mode"
+            title="Toggle theme"
+          >
+            <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+
+          <!-- Clear chat -->
+          <button
+            id="clearBtn"
+            class="icon-btn"
+            aria-label="Clear conversation"
+            title="Clear chat"
+          >
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="3 6 5 6 21 6"/>
+              <path d="M19 6l-1 14H6L5 6"/>
+              <path d="M10 11v6"/>
+              <path d="M14 11v6"/>
+              <path d="M9 6V4h6v2"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Messages area -->
+      <section class="messages-area" id="messagesArea" aria-live="polite" aria-label="Chat messages">
+        <!-- Messages injected by JS -->
+      </section>
+
+      <!-- Typing indicator (hidden by default) -->
+      <div class="typing-wrapper" id="typingWrapper" aria-hidden="true">
+        <div class="typing-bubble">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <span class="typing-label">Malati is typing…</span>
+      </div>
+
+      <!-- Quick actions -->
+      <div class="quick-actions" id="quickActions">
+        <button class="quick-btn" data-msg="Tell me one line from Bhagavad Gita">🕉️ Gita Quote</button>
+        <button class="quick-btn" data-msg="Tell me one verse from the Bible">✝️ Bible Quote</button>
+        <button class="quick-btn" data-msg="Tell me a joke">😂 Joke</button>
+        <button class="quick-btn" data-msg="Tell me a fun fact">🌍 Fun Fact</button>
+        <button class="quick-btn" data-msg="Motivate me">💪 Motivate me</button>
+        <button class="quick-btn" data-msg="How to meditate?">🧘 Meditation</button>
+      </div>
+
+      <!-- Input area -->
+      <footer class="input-area">
+        <div class="input-wrapper">
+          <textarea
+            id="userInput"
+            class="message-input"
+            placeholder="Type a message…"
+            rows="1"
+            maxlength="500"
+            aria-label="Message input"
+            autocomplete="off"
+            spellcheck="true"
+          ></textarea>
+          <button
+            id="sendBtn"
+            class="send-btn"
+            aria-label="Send message"
+            title="Send (Enter)"
+            disabled
+          >
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+        <p class="input-hint">Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line</p>
+      </footer>
+
+    </div><!-- /.chat-card -->
+
+    <!-- ── Footer ─────────────────────────────────────────────── -->
+    <footer class="site-footer">
+      <p>Built by Pujan Subedi · © 2026 Malati</p>
+    </footer>
+
+  </div><!-- /.app-wrapper -->
+
+  <!-- Clear chat confirmation modal -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal">
+      <h2 class="modal-title" id="modalTitle">Clear conversation?</h2>
+      <p class="modal-body">This will remove all messages. This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="modalCancel">Cancel</button>
+        <button class="btn btn-danger" id="modalConfirm">Clear chat</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (function () {
+      var container = document.getElementById('scatterWrap');
+      var symbols = [
+        '✦', '★', '✧', '⭐', '·', '☽', '✦', '★', '✧', '·',
+        '☾', '✦', '⋆', '✶', '☽', '✧', '⭐', '·', '✦', '★',
+        '☾', '⋆', '✶', '☽', '✧', '⭐', '·', '✦', '★', '☾',
+        '🌟', '💫', '✨', '☄', '·', '✦', '·', '★', '✧', '·',
+        '☽', '·', '✦', '⋆', '·', '★', '·', '✧', '·', '✦'
+      ];
+      for (var i = 0; i < 40; i++) {
+        var el = document.createElement('span');
+        el.className = 'scatter-letter';
+        el.textContent = symbols[i % symbols.length];
+        el.style.left = (Math.random() * 95) + '%';
+        el.style.top  = (Math.random() * 95) + '%';
+        el.style.setProperty('--dx', (Math.random() * 80 - 40) + 'px');
+        el.style.setProperty('--dy', (Math.random() * 60 - 30) + 'px');
+        el.style.setProperty('--dur', (5 + Math.random() * 8) + 's');
+        el.style.animationDelay = (-Math.random() * 6) + 's';
+        el.style.fontSize = (0.8 + Math.random() * 1.2) + 'rem';
+        container.appendChild(el);
+      }
+    })();
+  </script>
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
